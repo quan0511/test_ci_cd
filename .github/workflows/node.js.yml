@@ -46,8 +46,6 @@ jobs:
       run: |
         ssh -o StrictHostKeyChecking=no ubuntu@3.80.203.92 << 'EOF'
         cd /var/www/banhcuon/html
-        git fetch --all
-        git reset --hard origin/main  # Force reset to the latest commit on main
         git pull origin main
         npm install
         npm run build
